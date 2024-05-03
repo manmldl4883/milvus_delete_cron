@@ -1,7 +1,7 @@
 name: Delete Milvus
 on:
   schedule:
-    - cron: '*/360 * * * *'  # Runs every 6 hours
+    - cron: '*/60 * * * *'  # Runs every 1 hour
   workflow_dispatch:
     
 jobs:
