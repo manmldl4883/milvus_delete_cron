@@ -1,0 +1,13 @@
+name: Delete Milvus
+on:
+  schedule:
+    - cron: '*/360 * * * *'  # Runs every 6 hours
+  workflow_dispatch:
+    
+jobs:
+  cron:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Delete Milvus 
+        run: curl -m 120 ${{ secrets.URL }}
+        
